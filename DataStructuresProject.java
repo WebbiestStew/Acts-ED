@@ -1,3 +1,4 @@
+// ----------------------------- NODE -----------------------------
 class Node<T> {
     private T data;
     private Node<T> next;
@@ -40,7 +41,7 @@ class Stack<T> {
 
     public T pop() {
         if (top == null) {
-            System.out.println("⚠️ Stack is empty");
+            System.out.println("Stack is empty");
             return null;
         }
         T data = top.getData();
@@ -58,7 +59,7 @@ class Stack<T> {
 
     public void showAll() {
         Node<T> current = top;
-        System.out.println("📌 Urgent Tasks (Stack):");
+        System.out.println("Urgent Tasks (Stack):");
         while (current != null) {
             System.out.println("- " + current.getData());
             current = current.getNext();
@@ -86,7 +87,7 @@ class Queue<T> {
 
     public T dequeue() {
         if (front == null) {
-            System.out.println("⚠️ Queue is empty");
+            System.out.println("Queue is empty");
             return null;
         }
         T data = front.getData();
@@ -105,7 +106,7 @@ class Queue<T> {
 
     public void showAll() {
         Node<T> current = front;
-        System.out.println("📋 Scheduled Tasks (Queue):");
+        System.out.println("Scheduled Tasks (Queue):");
         while (current != null) {
             System.out.println("- " + current.getData());
             current = current.getNext();
@@ -165,7 +166,7 @@ class List<T> {
 
     public void showAll() {
         Node<T> current = head;
-        System.out.println("📂 Department Tasks (List):");
+        System.out.println("Department Tasks (List):");
         while (current != null) {
             System.out.println("- " + current.getData());
             current = current.getNext();
@@ -185,8 +186,8 @@ public class DataStructuresProject {
         int option;
 
         System.out.println("=======================================");
-        System.out.println("🧠 Data Structures Project");
-        System.out.println("👤 Program by Diego Villarreal");
+        System.out.println("Data Structures Project");
+        System.out.println("Program by Diego Villarreal");
         System.out.println("=======================================\n");
 
         do {
@@ -229,10 +230,10 @@ public class DataStructuresProject {
                     else if (type.equalsIgnoreCase("list")) list.delete(task);
                     break;
                 case 0:
-                    System.out.println("👋 Exiting...");
+                    System.out.println("Exiting...");
                     break;
                 default:
-                    System.out.println("⚠️ Invalid option.");
+                    System.out.println("Invalid option.");
             }
         } while (option != 0);
     }
